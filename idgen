@@ -1,0 +1,8 @@
+from random import randint
+idlist = []
+def idgen():
+	while True:
+		r = hex(randint(1,68719476736)) #64**6
+		if r not in idlist:
+			idlist.append(r)
+			return r
