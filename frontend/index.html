@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short Urls Creator</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <h1>Input your link!</h1>
+
+    <form class="form" method="post">
+        <div class="name-section"></div>
+        <input type="text" name="text" autocomplete="off" required/>
+        <label for="name" class="label-name">
+            <span class="content-name">Name</span>
+        </label>
+    </form>
+
+    {% if link is defined %}
+    <div>
+        <h1>Your link is:</h1>
+        <p style="text-align: center;">{{link}}</p>
+    </div>
+    {% endif %}
+
+</body>
+</html>
