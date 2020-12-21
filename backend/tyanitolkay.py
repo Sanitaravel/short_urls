@@ -15,4 +15,4 @@ def pull(destination="noteid.json"):
 
 def add(data, destination="noteid.json"):
 	print("adding to ", destination)
-	push(pull(destination) + data, destination="noteid.json")
+	push({'idlist': {**pull(destination)['idlist'], **data}}, destination="noteid.json")

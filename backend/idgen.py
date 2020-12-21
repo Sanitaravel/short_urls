@@ -1,6 +1,9 @@
 from random import randint
+
 idlist = []
-def idgen():
+
+def idgen(ids):
+	idlist = ids
 	while True:
 		r = hex(randint(1,68719476736)) #64**6
 		print("trying ",r)
